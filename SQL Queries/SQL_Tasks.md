@@ -193,7 +193,7 @@ HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
 
 ### 14. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?   **COMPLETE**
 
-*The difference between the average value of 3 adn 4 bedroom properties is $169288.09.*
+*The difference between the average value of 3 and 4 bedroom properties is $169288.09.*
 
 ```
 SELECT ROUND(MAX(avg_price)-MIN(avg_price),2) as 'Difference Between Avg Price of 3/4 Bedroom Properties' FROM
