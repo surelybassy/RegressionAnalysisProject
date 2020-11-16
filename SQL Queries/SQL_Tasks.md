@@ -38,7 +38,7 @@ SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
 
 7. Now we will try to find the unique values in some of the categorical columns:
 
-    -What are the unique values in the column bedrooms?
+-What are the unique values in the column bedrooms? **COMPLETE**
     
     *There are 12 unique values in the bedrooms column, these are 1,2,3,4,5,6,7,8,9,10,11,33. Possible bad data with the 33 roomed property*
     
@@ -46,34 +46,51 @@ SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
 SELECT DISTINCT bedrooms FROM house_price_data;
 ```
        
-   -What are the unique values in the column bathrooms?
+-What are the unique values in the column bathrooms? **COMPLETE**
+      
+   *There are 29 distinct values in the bathrooms column, ranging from 0.5 - 8.*
     
 ```
-CODE HERE;
+SELECT DISTINCT bathrooms FROM house_price_data; 
 ```
     
-   -What are the unique values in the column floors?
+-What are the unique values in the column floors? **COMPLETE**
+   
+   *There are 4 distinct values in the floors column. 1,2,3 and 4*
     
 ```
-CODE HERE;
+SELECT DISTINCT floors FROM house_price_data;
 ```
     
-   -What are the unique values in the column condition?
+-What are the unique values in the column condition? **COMPLETE**
+   
+   *There are 5 distinct values in the condition column, 1,2,3,4 and 5. From the information about the dataset it states that these vulues relate to the overall condition of the property. "1 indicates worn out property and 5 excellent."*
     
 ```
-CODE HERE;
+SELECT DISTINCT house_price_data.condition FROM house_price_data;
 ```
-    
-   -What are the unique values in the column grade?
-    
-```
-CODE HERE;
-```
-    
 
+-What are the unique values in the column grade? **COMPLETE**
+
+*There are 13 unique values in the grade column. Integers from 3 - 13. From the documentation: "Overall grade given to the housing unit, based on King County grading system. 1 poor ,13 excellent."*
+    
+```
+SELECT DISTINCT grade FROM house_price_data;
+```
+    
 8. Arrange the data in a decreasing order by the price of the house. Return only the IDs of the top 10 most expensive houses in your data.
 
+*The largest sales value in the database is the property with id:6762700020*
+
+```
+SELECT id FROM house_price_data ORDER BY price DESC LIMIT 10;
+```
+
 9. What is the average price of all the properties in your data?
+
+```
+CODE HERE;
+```
 
 10. In this exercise we will use simple group by to check the properties of some of the categorical variables in our data
     -What is the average price of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the prices. Use an alias to change the name of the second column.
