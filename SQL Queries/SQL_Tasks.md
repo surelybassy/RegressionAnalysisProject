@@ -142,7 +142,7 @@ FROM house_price_data
 GROUP BY 1;
 ```
 
-### 11. One of the customers is only interested in the following houses:
+### 11. One of the customers is only interested in the following houses:     **COMPLETE**
 
     -Number of bedrooms either 3 or 4
     
@@ -174,7 +174,7 @@ AND grade >= 5
 AND price < 300000;
 ```
 
-### 12. Your manager wants to find out the list of properties whose prices are twice more than the average of all the properties in the database. Write a query to show them the list of such properties. You might need to use a sub query for this problem.
+### 12. Your manager wants to find out the list of properties whose prices are twice more than the average of all the properties in the database. Write a query to show them the list of such properties. You might need to use a sub query for this problem.   **COMPLETE**
 
 *The average house price is '$540296.57'. Selecting property with twice the average value returns 1246 records.*
 
@@ -183,7 +183,7 @@ SELECT * FROM house_price_data
 HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
 ```
 
-### 13. Since this is something that the senior management is regularly interested in, create a view of the same query.
+### 13. Since this is something that the senior management is regularly interested in, create a view of the same query. **COMPLETE**
 
 ```
 CREATE OR REPLACE VIEW property_twice_avg_price AS
@@ -191,7 +191,7 @@ SELECT * FROM house_price_data
 HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
 ```
 
-### 14. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?
+### 14. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?   **COMPLETE**
 
 *The difference between the average value of 3 adn 4 bedroom properties is $169288.09.*
 
@@ -202,15 +202,17 @@ WHERE bedrooms IN (3,4)
 GROUP BY bedrooms) as sub1;
 ```
 
-### 15. What are the different locations where properties are available in your database? (distinct zip codes)
+### 15. What are the different locations where properties are available in your database? (distinct zip codes)  **COMPLETE**
 
 *There are 70 unique zipcodes listed in the database.*
 
 ```
 SELECT COUNT(DISTINCT zipcode) FROM house_price_data;
+
+SELECT DISTINCT zipcode FROM house_price_data;
 ```
 
-### 16. Show the list of all the properties that were renovated.
+### 16. Show the list of all the properties that were renovated.    **COMPLETE**
 
 *There are 914 properties in the database that have been renovated.*
 
@@ -219,7 +221,7 @@ SELECT * FROM house_price_data
 HAVING yr_renovated > 0;
 ```
 
-### 17. Provide the details of the property that is the 11th most expensive property in your database.
+### 17. Provide the details of the property that is the 11th most expensive property in your database.  **COMPLETE**
 
 ```
 CREATE OR REPLACE VIEW property_by_price_desc AS
