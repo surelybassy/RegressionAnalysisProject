@@ -14,9 +14,9 @@ SET GLOBAL local_infile = 1;
 
 
 4. Select all the data from table house_price_data to check if the data was imported correctly. **COMPLETE**
-'''sql
+```
 SELECT * FROM house_price_regression.house_price_data;
-'''
+```
 
 5. Use the alter table command to drop the column date from the database, as we would not use it in the analysis with SQL. Select all the data from the table to verify if the command worked. Limit your returned results to 10.
 
