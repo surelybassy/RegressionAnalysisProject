@@ -40,7 +40,7 @@ SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
 
 -What are the unique values in the column bedrooms? **COMPLETE**
     
-    *There are 12 unique values in the bedrooms column, these are 1,2,3,4,5,6,7,8,9,10,11,33. Possible bad data with the 33 roomed property*
+*There are 12 unique values in the bedrooms column, these are 1,2,3,4,5,6,7,8,9,10,11,33. Possible bad data with the 33 roomed property*
     
 ``` '*.sql'
 SELECT DISTINCT bedrooms FROM house_price_data;
@@ -48,7 +48,7 @@ SELECT DISTINCT bedrooms FROM house_price_data;
        
 -What are the unique values in the column bathrooms? **COMPLETE**
       
-   *There are 29 distinct values in the bathrooms column, ranging from 0.5 - 8.*
+*There are 29 distinct values in the bathrooms column, ranging from 0.5 - 8.*
     
 ```
 SELECT DISTINCT bathrooms FROM house_price_data; 
@@ -56,7 +56,7 @@ SELECT DISTINCT bathrooms FROM house_price_data;
     
 -What are the unique values in the column floors? **COMPLETE**
    
-   *There are 4 distinct values in the floors column. 1,2,3 and 4*
+*There are 4 distinct values in the floors column. 1,2,3 and 4*
     
 ```
 SELECT DISTINCT floors FROM house_price_data;
