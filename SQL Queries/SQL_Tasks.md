@@ -78,7 +78,7 @@ SELECT DISTINCT house_price_data.condition FROM house_price_data;
 SELECT DISTINCT grade FROM house_price_data;
 ```
     
-8. Arrange the data in a decreasing order by the price of the house. Return only the IDs of the top 10 most expensive houses in your data.
+8. Arrange the data in a decreasing order by the price of the house. Return only the IDs of the top 10 most expensive houses in your data. **COMPLETE**
 
 *The largest sales value in the database is the property with id:6762700020*
 
@@ -86,22 +86,57 @@ SELECT DISTINCT grade FROM house_price_data;
 SELECT id FROM house_price_data ORDER BY price DESC LIMIT 10;
 ```
 
-9. What is the average price of all the properties in your data?
+9. What is the average price of all the properties in your data? **COMPLETE**
+
 *The average property value in the database is $540,296.57.*
 
 ```
 SELECT ROUND(AVG(price),2) AS 'AveragePrice' FROM house_price_data;
 ```
 
+
 10. In this exercise we will use simple group by to check the properties of some of the categorical variables in our data
 
--What is the average price of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the prices. Use an alias to change the name of the second column.
+-What is the average price of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the prices. Use an alias to change the name of the second column. **COMPLETE**
+
+```
+SELECT bedrooms, ROUND(AVG(price),2) AS 'Average of the prices'
+FROM house_price_data
+GROUP BY bedrooms
+ORDER BY 2 DESC;
+```
     
--What is the average sqft_living of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the sqft_living. Use an alias to change the name of the second column.
+-What is the average sqft_living of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the sqft_living. Use an alias to change the name of the second column. **COMPLETE**
+
+```
+SELECT bedrooms, ROUND(AVG(sqft_living),2) AS 'Average of the sqft_living'
+FROM house_price_data
+GROUP BY bedrooms
+ORDER BY 2 DESC;
+```
     
--What is the average price of the houses with a waterfront and without a waterfront? The returned result should have only two columns, waterfront and Average of the prices. Use an alias to change the name of the second column.
+-What is the average price of the houses with a waterfront and without a waterfront? The returned result should have only two columns, waterfront and Average of the prices. Use an alias to change the name of the second column. **COMPLETE**
+
+```
+SELECT waterfront, ROUND(AVG(price),2) AS 'Average Price'
+FROM house_price_data
+GROUP BY waterfront
+ORDER BY 2 DESC;
+```
     
--Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables.
+-Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables. **CHECK WITH TA**
+
+*MyCommentHere*
+
+```
+SELECT house_price_data.condition, COUNT(DISTINCT grade)
+FROM house_price_data
+GROUP BY 1;
+
+SELECT COUNT(DISTINCT house_price_data.condition), grade
+FROM house_price_data
+GROUP BY 2;
+```
 
 11. One of the customers is only interested in the following houses:
 
@@ -112,6 +147,21 @@ SELECT ROUND(AVG(price),2) AS 'AveragePrice' FROM house_price_data;
     -Condition should be 3 at least
     -Grade should be 5 at least
     -Price less than 300000
+    
+*My Comments*
+
+```
+SELECT * 
+FROM house_price_data
+WHERE bedrooms IN (3,4)
+AND bathrooms > 3
+AND floors = 1
+AND waterfront = 0
+AND house_price_data.condition >= 3
+AND grade >= 5
+AND price < 300000
+;
+```
 
 12. For the rest of the things, they are not too concerned. Write a simple query to find what are the options available for them?
 
