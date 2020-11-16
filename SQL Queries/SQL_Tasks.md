@@ -64,7 +64,7 @@ SELECT DISTINCT floors FROM house_price_data;
     
 -What are the unique values in the column condition? **COMPLETE**
    
-   *There are 5 distinct values in the condition column, 1,2,3,4 and 5. From the information about the dataset it states that these vulues relate to the overall condition of the property. "1 indicates worn out property and 5 excellent."*
+*There are 5 distinct values in the condition column, 1,2,3,4 and 5. From the information about the dataset it states that these vulues relate to the overall condition of the property. "1 indicates worn out property and 5 excellent."*
     
 ```
 SELECT DISTINCT house_price_data.condition FROM house_price_data;
@@ -87,16 +87,21 @@ SELECT id FROM house_price_data ORDER BY price DESC LIMIT 10;
 ```
 
 9. What is the average price of all the properties in your data?
+*The average property value in the database is $540,296.57.*
 
 ```
-CODE HERE;
+SELECT ROUND(AVG(price),2) AS 'AveragePrice' FROM house_price_data;
 ```
 
 10. In this exercise we will use simple group by to check the properties of some of the categorical variables in our data
-    -What is the average price of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the prices. Use an alias to change the name of the second column.
-    -What is the average sqft_living of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the sqft_living. Use an alias to change the name of the second column.
-    -What is the average price of the houses with a waterfront and without a waterfront? The returned result should have only two columns, waterfront and Average of the prices. Use an alias to change the name of the second column.
-    -Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables.
+
+-What is the average price of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the prices. Use an alias to change the name of the second column.
+    
+-What is the average sqft_living of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the sqft_living. Use an alias to change the name of the second column.
+    
+-What is the average price of the houses with a waterfront and without a waterfront? The returned result should have only two columns, waterfront and Average of the prices. Use an alias to change the name of the second column.
+    
+-Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables.
 
 11. One of the customers is only interested in the following houses:
 
