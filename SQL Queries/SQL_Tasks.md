@@ -2,11 +2,11 @@
 
 (Use sub queries or views wherever necessary)
 
-## 1. Create a database called house_price_regression. **COMPLETE**
+### 1. Create a database called house_price_regression. **COMPLETE**
 
-## 2. Create a table house_price_data with the same columns as given in the csv file. Please make sure you use the correct data types for the columns.  **COMPLETE**
+### 2. Create a table house_price_data with the same columns as given in the csv file. Please make sure you use the correct data types for the columns.  **COMPLETE**
 
-## 3. Import the data from the csv file into the table. Before you import the data into the empty table, make sure that you have deleted the headers from the csv file. To not modify the original data, if you want you can create a copy of the csv file as well. Note you might have to use the following queries to give permission to SQL to import data from csv files in bulk:
+### 3. Import the data from the csv file into the table. Before you import the data into the empty table, make sure that you have deleted the headers from the csv file. To not modify the original data, if you want you can create a copy of the csv file as well. Note you might have to use the following queries to give permission to SQL to import data from csv files in bulk:
 
 SHOW VARIABLES LIKE 'local_infile'; -- This query would show you the status of the variable ‘local_infile’. If it is off, use the next command, otherwise you should be good to go
 SET GLOBAL local_infile = 1;
@@ -14,12 +14,12 @@ SET GLOBAL local_infile = 1;
 **COMPLETE**
 
 
-## 4. Select all the data from table house_price_data to check if the data was imported correctly. **COMPLETE**
+### 4. Select all the data from table house_price_data to check if the data was imported correctly. **COMPLETE**
 ```
 SELECT * FROM house_price_regression.house_price_data;
 ```
 
-## 5. Use the alter table command to drop the column date from the database, as we would not use it in the analysis with SQL. Select all the data from the table to verify if the command worked. Limit your returned results to 10. **COMPLETE**
+### 5. Use the alter table command to drop the column date from the database, as we would not use it in the analysis with SQL. Select all the data from the table to verify if the command worked. Limit your returned results to 10. **COMPLETE**
 
 ```
 ALTER TABLE house_price_data
@@ -28,7 +28,7 @@ DROP COLUMN date;
 SELECT * FROM house_price_data LIMIT 10;
 ```
 
-6. Use sql query to find how many rows of data you have. **COMPLETE**
+### 6. Use sql query to find how many rows of data you have. **COMPLETE**
 
 *There were 21,597 records returned*
 
@@ -36,7 +36,7 @@ SELECT * FROM house_price_data LIMIT 10;
 SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
 ```
 
-7. Now we will try to find the unique values in some of the categorical columns:
+### 7. Now we will try to find the unique values in some of the categorical columns:
 
 -What are the unique values in the column bedrooms? **COMPLETE**
     
@@ -78,7 +78,7 @@ SELECT DISTINCT house_price_data.condition FROM house_price_data;
 SELECT DISTINCT grade FROM house_price_data;
 ```
     
-8. Arrange the data in a decreasing order by the price of the house. Return only the IDs of the top 10 most expensive houses in your data. **COMPLETE**
+### 8. Arrange the data in a decreasing order by the price of the house. Return only the IDs of the top 10 most expensive houses in your data. **COMPLETE**
 
 *The largest sales value in the database is the property with id:6762700020*
 
@@ -86,7 +86,7 @@ SELECT DISTINCT grade FROM house_price_data;
 SELECT id FROM house_price_data ORDER BY price DESC LIMIT 10;
 ```
 
-9. What is the average price of all the properties in your data? **COMPLETE**
+### 9. What is the average price of all the properties in your data? **COMPLETE**
 
 *The average property value in the database is $540,296.57.*
 
@@ -95,7 +95,7 @@ SELECT ROUND(AVG(price),2) AS 'AveragePrice' FROM house_price_data;
 ```
 
 
-10. In this exercise we will use simple group by to check the properties of some of the categorical variables in our data
+### 10. In this exercise we will use simple group by to check the properties of some of the categorical variables in our data
 
 -What is the average price of the houses grouped by bedrooms? The returned result should have only two columns, bedrooms and Average of the prices. Use an alias to change the name of the second column. **COMPLETE**
 
@@ -142,7 +142,7 @@ FROM house_price_data
 GROUP BY 1;
 ```
 
-11. One of the customers is only interested in the following houses:
+### 11. One of the customers is only interested in the following houses:
 
     -Number of bedrooms either 3 or 4
     
@@ -174,7 +174,7 @@ AND grade >= 5
 AND price < 300000;
 ```
 
-12. Your manager wants to find out the list of properties whose prices are twice more than the average of all the properties in the database. Write a query to show them the list of such properties. You might need to use a sub query for this problem.
+### 12. Your manager wants to find out the list of properties whose prices are twice more than the average of all the properties in the database. Write a query to show them the list of such properties. You might need to use a sub query for this problem.
 
 *The average house price is '$540296.57'. Selecting property with twice the average value returns 1246 records.*
 
@@ -183,7 +183,7 @@ SELECT * FROM house_price_data
 HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
 ```
 
-13. Since this is something that the senior management is regularly interested in, create a view of the same query.
+### 13. Since this is something that the senior management is regularly interested in, create a view of the same query.
 
 ```
 CREATE OR REPLACE VIEW property_twice_avg_price AS
@@ -191,7 +191,7 @@ SELECT * FROM house_price_data
 HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
 ```
 
-14. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?
+### 14. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?
 
 *The difference between the average value of 3 adn 4 bedroom properties is $169288.09.*
 
@@ -202,7 +202,7 @@ WHERE bedrooms IN (3,4)
 GROUP BY bedrooms) as sub1;
 ```
 
-15. What are the different locations where properties are available in your database? (distinct zip codes)
+### 15. What are the different locations where properties are available in your database? (distinct zip codes)
 
 *There are 70 unique zipcodes listed in the database.*
 
@@ -210,7 +210,7 @@ GROUP BY bedrooms) as sub1;
 SELECT COUNT(DISTINCT zipcode) FROM house_price_data;
 ```
 
-16. Show the list of all the properties that were renovated.
+### 16. Show the list of all the properties that were renovated.
 
 *There are 914 properties in the database that have been renovated.*
 
@@ -219,7 +219,7 @@ SELECT * FROM house_price_data
 HAVING yr_renovated > 0;
 ```
 
-17. Provide the details of the property that is the 11th most expensive property in your database.
+### 17. Provide the details of the property that is the 11th most expensive property in your database.
 
 ```
 CREATE OR REPLACE VIEW property_by_price_desc AS
