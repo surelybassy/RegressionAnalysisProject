@@ -29,14 +29,18 @@ SELECT * FROM house_price_data LIMIT 10;
 ```
 
 6. Use sql query to find how many rows of data you have. **COMPLETE**
-*There were 21,597 records reeturned*
+
+*There were 21,597 records returned*
 
 ```
 SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
 ```
 
 7. Now we will try to find the unique values in some of the categorical columns:
+
     -What are the unique values in the column bedrooms?
+    
+    *There are 12 unique values in the bedrooms column, these are 1,2,3,4,5,6,7,8,9,10,11,33. Possible bad data with the 33 roomed property*
     
 ``` '*.sql'
 SELECT DISTINCT bedrooms FROM house_price_data;
@@ -78,6 +82,7 @@ CODE HERE;
     -Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables.
 
 11. One of the customers is only interested in the following houses:
+
     -Number of bedrooms either 3 or 4
     -Bathrooms more than 3
     -One Floor
