@@ -10,6 +10,7 @@
 
 SHOW VARIABLES LIKE 'local_infile'; -- This query would show you the status of the variable ‘local_infile’. If it is off, use the next command, otherwise you should be good to go
 SET GLOBAL local_infile = 1;
+
 **COMPLETE**
 
 
@@ -18,16 +19,54 @@ SET GLOBAL local_infile = 1;
 SELECT * FROM house_price_regression.house_price_data;
 ```
 
-5. Use the alter table command to drop the column date from the database, as we would not use it in the analysis with SQL. Select all the data from the table to verify if the command worked. Limit your returned results to 10.
+5. Use the alter table command to drop the column date from the database, as we would not use it in the analysis with SQL. Select all the data from the table to verify if the command worked. Limit your returned results to 10. **COMPLETE**
 
-6. Use sql query to find how many rows of data you have.
+```
+ALTER TABLE house_price_data
+DROP COLUMN date;
+
+SELECT * FROM house_price_data LIMIT 10;
+```
+
+6. Use sql query to find how many rows of data you have. **COMPLETE**
+*There were 21,597 records reeturned*
+
+```
+SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
+```
 
 7. Now we will try to find the unique values in some of the categorical columns:
     -What are the unique values in the column bedrooms?
+    
+```
+CODE HERE;
+```
+    
     -What are the unique values in the column bathrooms?
+    
+```
+CODE HERE;
+```
+    
     -What are the unique values in the column floors?
+    
+```
+CODE HERE;
+```
+    
     -What are the unique values in the column condition?
+    
+```
+CODE HERE;
+```
+    
     -What are the unique values in the column grade?
+    
+    
+```
+CODE HERE;
+```
+    
 
 8. Arrange the data in a decreasing order by the price of the house. Return only the IDs of the top 10 most expensive houses in your data.
 
