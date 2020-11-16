@@ -38,30 +38,29 @@ SELECT COUNT(*) as 'Number of Records' FROM house_price_data;
 7. Now we will try to find the unique values in some of the categorical columns:
     -What are the unique values in the column bedrooms?
     
+``` '*.sql'
+SELECT DISTINCT bedrooms FROM house_price_data;
 ```
-CODE HERE;
-```
-    
-    -What are the unique values in the column bathrooms?
-    
-```
-CODE HERE;
-```
-    
-    -What are the unique values in the column floors?
+       
+   -What are the unique values in the column bathrooms?
     
 ```
 CODE HERE;
 ```
     
-    -What are the unique values in the column condition?
+   -What are the unique values in the column floors?
     
 ```
 CODE HERE;
 ```
     
-    -What are the unique values in the column grade?
+   -What are the unique values in the column condition?
     
+```
+CODE HERE;
+```
+    
+   -What are the unique values in the column grade?
     
 ```
 CODE HERE;
