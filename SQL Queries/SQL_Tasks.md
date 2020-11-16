@@ -136,18 +136,30 @@ GROUP BY 1;
 SELECT COUNT(DISTINCT house_price_data.condition), grade
 FROM house_price_data
 GROUP BY 2;
+
+SELECT house_price_data.condition, AVG(grade)
+FROM house_price_data
+GROUP BY 1;
 ```
 
 11. One of the customers is only interested in the following houses:
 
     -Number of bedrooms either 3 or 4
+    
     -Bathrooms more than 3
+    
     -One Floor
+    
     -No waterfront
+    
     -Condition should be 3 at least
+    
     -Grade should be 5 at least
+    
     -Price less than 300000
     
+For the rest of the things, they are not too concerned. Write a simple query to find what are the options available for them?
+
 *My Comments*
 
 ```
@@ -159,20 +171,61 @@ AND floors = 1
 AND waterfront = 0
 AND house_price_data.condition >= 3
 AND grade >= 5
-AND price < 300000
-;
+AND price < 300000;
 ```
 
-12. For the rest of the things, they are not too concerned. Write a simple query to find what are the options available for them?
+12. Your manager wants to find out the list of properties whose prices are twice more than the average of all the properties in the database. Write a query to show them the list of such properties. You might need to use a sub query for this problem.
 
-13. Your manager wants to find out the list of properties whose prices are twice more than the average of all the properties in the database. Write a query to show them the list of such properties. You might need to use a sub query for this problem.
+*The average house price is '$540296.57'. Selecting property with twice the average value returns 1246 records.*
 
-14. Since this is something that the senior management is regularly interested in, create a view of the same query.
+```
+SELECT * FROM house_price_data
+HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
+```
 
-15. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?
+13. Since this is something that the senior management is regularly interested in, create a view of the same query.
 
-16. What are the different locations where properties are available in your database? (distinct zip codes)
+```
+CREATE OR REPLACE VIEW property_twice_avg_price AS
+SELECT * FROM house_price_data
+HAVING price > (SELECT AVG(price)*2 FROM house_price_data);
+```
 
-17. Show the list of all the properties that were renovated.
+14. Most customers are interested in properties with three or four bedrooms. What is the difference in average prices of the properties with three and four bedrooms?
 
-18. Provide the details of the property that is the 11th most expensive property in your database.
+*The difference between the average value of 3 adn 4 bedroom properties is $169288.09.*
+
+```
+SELECT ROUND(MAX(avg_price)-MIN(avg_price),2) as 'Difference Between Avg Price of 3/4 Bedroom Properties' FROM
+(SELECT  bedrooms, AVG(price) as avg_price FROM house_price_data
+WHERE bedrooms IN (3,4)
+GROUP BY bedrooms) as sub1;
+```
+
+15. What are the different locations where properties are available in your database? (distinct zip codes)
+
+*There are 70 unique zipcodes listed in the database.*
+
+```
+SELECT COUNT(DISTINCT zipcode) FROM house_price_data;
+```
+
+16. Show the list of all the properties that were renovated.
+
+*There are 914 properties in the database that have been renovated.*
+
+```
+SELECT * FROM house_price_data
+HAVING yr_renovated > 0;
+```
+
+17. Provide the details of the property that is the 11th most expensive property in your database.
+
+```
+CREATE OR REPLACE VIEW property_by_price_desc AS
+SELECT * , RANK () OVER ( ORDER BY price DESC) price_rank FROM house_price_data;
+
+SELECT * FROM property_by_price_desc
+HAVING price_rank = 11;
+```
+
