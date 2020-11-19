@@ -13,6 +13,7 @@ Tableau Questions:
 8. Now we want to deep dive into the categories we created in the last question. Let’s see how many properties are in each of the categories. Indicate the numbers as labels on each of the three categories.
 9. Deep dive in category A, category B and category C using filters. Identify different characteristics/trends for each of the three categories.
 10. Create a visually appealing dashboard to represent the information.
+![Alt text](MainDashboard-Tableau.png?raw=true "Main Dashboard")
 
 **Some points to keep in mind while working on the tableau questions:**
 
