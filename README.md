@@ -7,7 +7,7 @@ Using historical data from property sales in Washington state, USA, I was asked 
 
 ## My Approach
 
-I initially approached the project by brainstorming and creating a Kanban board, listing all of the jobs that I thought needed to completed in order to fulfil all the requirements, but was very aware that I would probably encounter a number of problems along the way so wanted to follow Agile methodology to allow for flexibility and continuous improvement.
+I initially approached the project by brainstorming and creating a Kanban board, listing all of the jobs that I thought needed to completed in order to fulfil all the requirements, however was very aware that I would probably encounter a number of problems along the way therefore wanted to follow Agile methodology to allow for flexibility and continuous improvement.
 
 ![Alt text](Images/Kanban.png?raw=true "Kanban Board")
 
@@ -33,7 +33,7 @@ There were a number of tasks and questions to answer in SQL and I decided to sta
 
 <img src="Images/PythonPic3.png" width="600" height="300"> 
 
-After competing the SQL tasks, I moved into Python. I imported the data into a Pandas dataframe and began to explore and analyse the data by using a number of different graphs and plots from Seaborn. This helped to identify features in the dataset the would require special attention during  cleaning and preprocessing.
+After competing the SQL tasks, I moved into Python. I imported the data into a Pandas dataframe and began to explore and analyse the data by using a number of different graphs and plots from Seaborn. This helped to identify features in the dataset that would require special attention during  cleaning and preprocessing.
 
 There were a number of duplicate property IDs for property sold twice within the time period. I decided to only include the most recent sale, as it would give a more accurate picture of the property market in the area at the time.
 
