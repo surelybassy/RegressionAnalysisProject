@@ -37,5 +37,5 @@ Python code: Your code will be reviewed. Make sure you follow the best practices
 
 ## Tableau
 
-![Alt text](Tableau/MainDashboard.png?raw=true "MainDashboard")
+![Alt text](Tableau/MainDashboard-Tableau.png?raw=true "MainDashboard")
 
