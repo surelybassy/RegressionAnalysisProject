@@ -36,25 +36,30 @@ After competing the SQL tasks, I moved into Python. I imported the data into a P
 
 There were a number of duplicate property IDs for property sold twice within the time period. I decided to only include the most recent sale, as it would give a more accurate picture of the property market in the area at the time.
 
-Using Box Plots, I could see that some of the data was very skewed and would need to think about how to deal with the outliers. There were also several columns containing a significant number of 0 values. 
+Using Box Plots, I could see that some of the data was very skewed and would need to think about how to deal with the outliers, specifically one property with 33 bedrooms. There were also several columns containing a significant number of 0 values. 
 
 
 ## Cleaning the Data
 
-
 <img src="Images/PythonPic1.png" width="600" height="300">
+
+Using a correlation matrix, I was able to indicate which columns had little to no correlation to the price of the property. I dropped several columns and then categrorised several of the columns that had mostly 0 values. I found I was able to get a more Normal Distribution for some of the data by running it through a log function, which should help with building a model. I identified the columns that were numerical and categorical, so I could either scale, normalise or use dummy variables in my model.
 
 
 ## Modelling the Data
 
 
+
+
 ## Tableau
+
+I found Tableau was very useful for both exploring the data and providing insight. After completing the assigned task, I was able to identify lots of interesting information for further exploration. Particularly looking at property built during different periods in history and how current events might effect the future value of property.
 
 ![Alt text](Tableau/MainDashboard-Tableau.png?raw=true "MainDashboard")
 
 
 
-## Cleaning the Data
+## Review
 
 
 
