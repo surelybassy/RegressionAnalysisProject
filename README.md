@@ -13,32 +13,34 @@ Your job is to build a model that will predict the price of a house based on fea
 
 Deliverables
 
-A slides deck: use slides.com for simple yet effective templates. You can also use Tableau Stories
-
-A presentation: Your public presentation should last between 5 and 7 minutes.
-
-SQL Queries: Access the SQL Questions file and make sure you run these queries using SQL.
-
-A Tableau Dashboard: Follow the instructions in this file to build in Tableau.
-
-Python code: Your code will be reviewed. Make sure you follow the best practices explained in the class so far.
+⋅⋅*  A slides deck: [My Slides](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
+⋅⋅*  A presentation: *Recorded Live*
+⋅⋅* SQL Queries: [My SQL Soultions](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
+⋅⋅* A Tableau Dashboard: [My Dashboard is Here](https://public.tableau.com/profile/andrew.ashdown#!/vizhome/MidBootcampProject-Story/AA-Mid-BootcampDashboard
+)
+⋅⋅* Python code: [My Jupyter Notebook](Python/LinearRegressionProject-FinalNotebook.ipynb)
 
 
 ## The Data
-![Alt text](Images/PythonPic3.png?raw=true "Data")
 
-<img src="Images/PythonPic3.png" width="200" height="100">
+<img src="Images/PythonPic3.png" width="200" height="300">
 
 
 
 ## Cleaning the Data
 
 
-<img src="Images/PythonPic2.png" width="200" height="100">
+<img src="Images/PythonPic1.png" width="200" height="300">
+
+
+
+## Cleaning the Data
+
+
 
 ## SQL
 
-
+There were a number of tasks and questions to answer in SQL. For this I use MySQL Workbench. After creating the database, I used the  import wizard to import the CSV file and then began to explore the data. My solutions to this can be found in the SQL folder of this repository.
 
 ## Tableau
 
