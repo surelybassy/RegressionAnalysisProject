@@ -25,13 +25,16 @@ Python code: Your code will be reviewed. Make sure you follow the best practices
 
 
 ## The Data
-![Alt text](Images/PythonPic3.png?raw=true "Data"){ width=10% }
+![Alt text](Images/PythonPic3.png?raw=true "Data")
+
+<img src="Images/PythonPic3.png" width="200" height="100">
 
 
 
 ## Cleaning the Data
 
-![Alt text](Images/PythonPic3.png?raw=true "Skewed Data"){ width=10% }
+
+<img src="Images/PythonPic2.png" width="200" height="100">
 
 ## SQL
 
