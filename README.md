@@ -1,17 +1,14 @@
 # RegressionAnalysisProject
 
-## Contents
-
-
 ## Project
 
-You are working as an analyst for a real estate company. Your company wants to build a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
+Using historical data from property sales in Washington state, USA, I have been ask to analyse and provide insight, as well as complete a number of specific tasks in SQL, Tableau and use Python to build a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
 
-Objective
+## My Approach
 
-Your job is to build a model that will predict the price of a house based on features provided in the dataset. Senior management also wants to explore the characteristics of the houses using some business intelligence tools. One of those parameters includes understanding which factors are responsible for higher property value - $650K and above.
+I initially approached the project by brainstorming and creating a Kanban board, listing all of the jobs that I thought needed to completed in order to fulfil all the requirements, but was very aware that I would probably encounter a number of problems along the way so wanted to follow Agile methodology to allow for flexibility and continuous improvement.
 
-Deliverables
+Project Deliverables
 
   *  A slides deck: [My Slides](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
   *  A presentation: *Recorded Live*
@@ -23,14 +20,14 @@ Deliverables
 
 ## The Data
 
-<img src="Images/PythonPic3.png" width="300" height="300">
+<img src="Images/PythonPic3.png" width="400" height="300">
 
 
 
 ## Cleaning the Data
 
 
-<img src="Images/PythonPic1.png" width="300" height="300">
+<img src="Images/PythonPic1.png" width="400" height="300">
 
 
 
