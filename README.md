@@ -1,5 +1,5 @@
 # Housing Price Analysis Project
-### Andrew Ashdown
+### Andrew Ashdown - November 2020
 
 ## Project
 
@@ -49,7 +49,7 @@ Using a correlation matrix, I was able to indicate which columns had little to n
 
 ## Modelling the Data
 
-After cleaning the data, I used a number of different regression algorithms to try and model the data and reviewed the results of each.
+After cleaning the data, I used a number of different regression algorithms to try and model the data and reviewed the results of each. I was able to get a score of 0.56 from the Linear Regressor. I ran several iteration using different combinations of columns to see if I could improve the score. After refining the model I was able to increase the score of my model to 0.73 using the KNN regressor. After doing lots of research I experimented with the ensemble.GradientBoostingRegressor and created a model with a score of 0.84. I then explored the predictions from each model and found that the KNN regressor was on average 22% away from the actual sales value and the ensemble regressor was only 13% away.
 
 
 ## Tableau
