@@ -8,9 +8,12 @@ Using historical data from property sales in Washington state, USA, I have been 
 
 I initially approached the project by brainstorming and creating a Kanban board, listing all of the jobs that I thought needed to completed in order to fulfil all the requirements, but was very aware that I would probably encounter a number of problems along the way so wanted to follow Agile methodology to allow for flexibility and continuous improvement.
 
+![Alt text](Images/Kanban.png?raw=true "Kanban Board")
+
+
 Project Deliverables
 
-  *  A slides deck: [My Slides](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
+  *  A slides deck: [My Slides](https://docs.google.com/presentation/d/1aU0oN8-odVbOynBnhMiN4cmolKOtC3c3SeO_X2kwP5M/edit?usp=sharing)
   *  A presentation: *Recorded Live*
   * SQL Queries: [My SQL Soultions](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
   * A Tableau Dashboard: [My Dashboard is Here](https://public.tableau.com/profile/andrew.ashdown#!/vizhome/MidBootcampProject-Story/AA-Mid-BootcampDashboard
@@ -20,14 +23,14 @@ Project Deliverables
 
 ## SQL
 
-There were a number of tasks and questions to answer in SQL and I decided to start with these, as I was most comforatable using MySQL. For these tasks I used MySQL Workbench. After creating the database, I used the  import wizard to import the CSV file and then began to explore the data. My solutions to this can be found in the SQL folder of this repository.
+There were a number of tasks and questions to answer in SQL and I decided to start with these, as I was most comforatable using MySQL. For these tasks I used MySQL Workbench. After creating the database, I used the import wizard to import the CSV file and then began to explore the data. My solutions to this can be found in the SQL folder of this repository.
 
 [My SQL Soultions](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
 
 
 ## The Data
 
-<img src="Images/PythonPic3.png" width="500" height="300">
+<img src="Images/PythonPic3.png" width="500" height="300"> After competing the SQL tasks, I moved into Python. I imported the data into a Pandas dataframe and began to explore and analyse the data by using a number of different graphs and plots from Seaborn. 
 
 
 
@@ -38,13 +41,16 @@ There were a number of tasks and questions to answer in SQL and I decided to sta
 
 
 
-## Cleaning the Data
-
-
-
 
 
 ## Tableau
 
 ![Alt text](Tableau/MainDashboard-Tableau.png?raw=true "MainDashboard")
+
+
+
+## Cleaning the Data
+
+
+
 
