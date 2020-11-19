@@ -1,4 +1,4 @@
-# SQL questions - regression
+# SQL questions and Solutions - regression
 
 (Use sub queries or views wherever necessary)
 
