@@ -1,6 +1,5 @@
 # SQL questions and Solutions - regression
 
-(Use sub queries or views wherever necessary)
 
 ### 1. Create a database called house_price_regression. **COMPLETE**
 
