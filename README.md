@@ -18,6 +18,11 @@ Project Deliverables
   * Python code: [My Jupyter Notebook](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/JupyterNotebooks/LinearRegressionProject-FinalNotebook.ipynb)
 
 
+## SQL
+
+There were a number of tasks and questions to answer in SQL and I decided to start with these, as I was most comforatable using MySQL. For these tasks I used MySQL Workbench. After creating the database, I used the  import wizard to import the CSV file and then began to explore the data. My solutions to this can be found in the SQL folder of this repository.
+
+[My SQL Soultions](https://github.com/surelybassy/RegressionAnalysisProject/blob/master/SQL%20Queries/SQL%20Tasks%20and%20Solutions.md)
 
 
 ## The Data
@@ -37,9 +42,7 @@ Project Deliverables
 
 
 
-## SQL
 
-There were a number of tasks and questions to answer in SQL. For this I use MySQL Workbench. After creating the database, I used the  import wizard to import the CSV file and then began to explore the data. My solutions to this can be found in the SQL folder of this repository.
 
 ## Tableau
 
