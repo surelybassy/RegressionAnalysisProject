@@ -1,8 +1,9 @@
-# RegressionAnalysisProject
+# Housing Price Analysis Project
+### Andrew Ashdown
 
 ## Project
 
-Using historical data from property sales in Washington state, USA, I have been ask to analyse and provide insight, as well as complete a number of specific tasks in SQL, Tableau and use Python to build a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
+Using historical data from property sales in Washington state, USA, I was asked to analyse and provide insight, as well as complete a number of specific tasks in SQL, Tableau and use Python to build a machine learning model to predict the selling prices of houses based on a variety of features on which the value of the house is evaluated.
 
 ## My Approach
 
@@ -48,12 +49,13 @@ Using a correlation matrix, I was able to indicate which columns had little to n
 
 ## Modelling the Data
 
-
+After cleaning the data, I used a number of different regression algorithms to try and model the data and reviewed the results of each.
 
 
 ## Tableau
 
-I found Tableau was very useful for both exploring the data and providing insight. After completing the assigned task, I was able to identify lots of interesting information for further exploration. Particularly looking at property built during different periods in history and how current events might effect the future value of property.
+I found Tableau was very useful for both exploring the data and providing insight. After completing the assigned task, I was able to identify lots of interesting information for further exploration. Particularly looking at property built during different periods in history and how current events might effect the future value of property. I created a number of different dashboards along with one final dashboard with the information I found most interesting. [These can all be found here](https://public.tableau.com/profile/andrew.ashdown#!/vizhome/MidBootcampProject-Story/AA-Mid-BootcampDashboard
+)
 
 ![Alt text](Tableau/MainDashboard-Tableau.png?raw=true "MainDashboard")
 
