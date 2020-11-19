@@ -63,6 +63,6 @@ I found Tableau was very useful for both exploring the data and providing insigh
 
 ## Review
 
+Using SQL, Tableau and various technique in Python I was able to gain lots of insight into the property market of Washington state. There were certain things you would expect to see, such as property value being in corrolation to the size of the property. Using the mapping techniques in Tableau I was able to identify more affluent areas and see how location effects the price of properties. 
 
-
-
+Using various modelling techniques I was able to create a model, that for properties with certain feature, was able to predict the sales value fairly accurately. I believe that with more refining I can improve my model to make better predictions.
