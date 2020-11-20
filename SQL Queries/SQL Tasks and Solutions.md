@@ -123,9 +123,9 @@ GROUP BY waterfront
 ORDER BY 2 DESC;
 ```
     
--Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables. **CHECK WITH TA**
+-Is there any correlation between the columns condition and grade? You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. Visually check if there is a positive correlation or negative correlation or no correlation between the variables. **COMPLETE**
 
-*MyCommentHere*
+
 
 ```
 SELECT house_price_data.condition, COUNT(DISTINCT grade)
